@@ -2,6 +2,7 @@ import pathlib
 import os
 import torch
 import sys
+import pickle
 
 root_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__))) + '/'
 sys.path.append(root_dir)
@@ -26,10 +27,21 @@ def get_sort(deep=True):
     
 def get_deepmar():
     from model.deepmar.baseline.model.DeepMAR import DeepMAR_ResNet50
-    model = DeepMAR_ResNet50()
-    model.load_state_dict(torch.load(root_dir+'weights/deepmar/deepmar_statedict.pth'))
-    model.eval()
+    class mixer():
+        def __init__(self):
+            self.model = DeepMAR_ResNet50()
+            self.model.load_state_dict(torch.load(root_dir+'weights/deepmar/deepmar_statedict.pth'))
+            self.model.eval()
+            self.attrs = 
     return model
 
 def get_mnnet():
-     
+    from model.HydraPlusNet.api import transform,model,attrs
+    class mixer():
+        def __init__(self):
+            self.model = model(root_dir+"weights/mnnet/MNet_epoch_995")#输入rgb
+            self.transform = transform
+            self.attrs = attrs
+    return mixer()
+
+def get_face()
