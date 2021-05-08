@@ -32,8 +32,8 @@ def get_deepmar():
             self.model = DeepMAR_ResNet50()
             self.model.load_state_dict(torch.load(root_dir+'weights/deepmar/deepmar_statedict.pth'))
             self.model.eval()
-            self.attrs = 
-    return model
+            self.attrs = pickle.load(open(root_dir+'model/deepmar/attribute_list_Chinese.pkl'))
+    return mixer()
 
 def get_mnnet():
     from model.HydraPlusNet.api import transform,model,attrs
@@ -43,5 +43,7 @@ def get_mnnet():
             self.transform = transform
             self.attrs = attrs
     return mixer()
+
+
 
 def get_face()
