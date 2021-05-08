@@ -1,0 +1,10 @@
+data/
+history/
+temp/
+*.pyc
+__pycache__/
+.idea/
+checkpoint/*
+hp_venv/
+result/
+

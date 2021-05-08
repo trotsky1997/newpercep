@@ -1,0 +1,2 @@
+weights/deepmar/deepmar_statedict.pth filter=lfs diff=lfs merge=lfs -text
+weights/deepmar/deepmar.pth filter=lfs diff=lfs merge=lfs -text
