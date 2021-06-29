@@ -1,7 +1,7 @@
 import os
 import cv2
 import torch
-from facelib import FaceDetector
+from .. import FaceDetector
 from pathlib import Path
 
 

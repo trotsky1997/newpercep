@@ -6,7 +6,7 @@ from torch import optim
 import numpy as np
 import os
 from tqdm import tqdm
-from facelib.utils import download_weight
+from ...utils import download_weight
 from .utils import get_time, gen_plot, separate_bn_paras
 from .utils import faces_preprocessing
 from PIL import Image

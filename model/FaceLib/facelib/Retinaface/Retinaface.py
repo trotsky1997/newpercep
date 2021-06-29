@@ -7,7 +7,7 @@ from .utils.alignment import get_reference_facial_points, FaceWarpException
 from .utils.box_utils import decode, decode_landmark, prior_box, nms
 from .utils.config import cfg_mnet, cfg_re50
 from .models.retinaface import RetinaFace
-from facelib.utils import download_weight
+from ..utils import download_weight
 
 
 class FaceDetector:

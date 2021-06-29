@@ -1,7 +1,7 @@
 import torch
 import os
 import numpy as np
-from facelib.utils import download_weight
+from ..utils import download_weight
 from .models.densenet import densenet121
 from .models.resnet import resnet34
 

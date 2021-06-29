@@ -24,6 +24,7 @@ data = scio.loadmat(dataFile)
 attrs = [i.item()[0] for i in data['attributes']]
 class model(torch.nn.Module):
     def __init__(self,weights):
+        super().__init__()
         self.net = MNet()
         self.net.load_state_dict(torch.load(weights))
         

@@ -1,0 +1,27 @@
+------------ Options -------------
+gpu_ids: 6
+batch_size: 128
+model_type: resnet50
+epoch: 20
+fix_epoch: 0.4
+img_size: 256
+lr: 0.0002
+beta1: 0.9
+beta2: 0.999
+k: 100
+adaptive_weights: True
+print_freq: 50
+clip_norm: 1.0
+warmup_iters: 200
+float16: True
+seed: 556
+input_path: ../img_align_celeba
+train_path: data_list/align_train/align_train_attr.txt
+dev_path: data_list/align_val/align_val_attr.txt
+test_path: data_list/align_test/align_test_attr.txt
+att_path: data_list/att_map.txt
+checkpoint_dir: check_points/FAC_resnet50_AW_V1
+setting_file: check_points/FAC_resnet50_AW_V1/setting.txt
+log_file: log.txt
+local_rank: -1
+-------------- End ----------------

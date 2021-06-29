@@ -1,5 +1,5 @@
-from facelib.AgeGender.models.model import ShuffleneTiny, ShuffleneFull
-from facelib.utils import download_weight
+from .models.model import ShuffleneTiny, ShuffleneFull
+from ..utils import download_weight
 import torch
 import os
 
